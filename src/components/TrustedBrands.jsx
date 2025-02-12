@@ -1,13 +1,13 @@
 import React from "react";
-import allianceLogo from "../assets/logos/allianceaviation.png";
-import drGarayLogo from "../assets/logos/dr-garay.webp";
-import exunetLogo from "../assets/logos/exunet.png";
-import glowmedLogo from "../assets/logos/glowmed.png";
-import linuxLogo from "../assets/logos/linux.webp";
-import miguelPugaLogo from "../assets/logos/miguelpuga.jpg";
-import rocaViviendasLogo from "../assets/logos/roca-viviendas.webp";
-import smartLogo from "../assets/logos/smart.webp";
-import tourmalhynLogo from "../assets/logos/tourmalhyn.png";
+import allianceLogo from "@/assets/logos/allianceaviation.png";
+import drGarayLogo from "@/assets/logos/dr-garay.webp";
+import exunetLogo from "@/assets/logos/exunet.png";
+import glowmedLogo from "@/assets/logos/glowmed.png";
+import linuxLogo from "@/assets/logos/linux.webp";
+import miguelPugaLogo from "@/assets/logos/miguelpuga.jpg";
+import rocaViviendasLogo from "@/assets/logos/roca-viviendas.webp";
+import smartLogo from "@/assets/logos/smart.webp";
+import tourmalhynLogo from "@/assets/logos/tourmalhyn.png";
 
 const brands = [
   {
