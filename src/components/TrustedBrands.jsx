@@ -1,66 +1,57 @@
 import React from "react";
-import allianceLogo from "@/assets/Logos/AllianceAviation.png";
-import drGarayLogo from "@/assets/Logos/dr-garay.webp";
-import exunetLogo from "@/assets/Logos/exunet.png";
-import glowmedLogo from "@/assets/Logos/glowmed.png";
-import linuxLogo from "@/assets/Logos/linux.webp";
-import miguelPugaLogo from "@/assets/Logos/MiguelPuga.jpg";
-import rocaViviendasLogo from "@/assets/Logos/roca-viviendas.webp";
-import smartLogo from "@/assets/Logos/Smart.webp";
-import tourmalhynLogo from "@/assets/Logos/tourmalhyn.png";
 
 const brands = [
   {
     id: 1,
     name: "Alliance",
-    logo: allianceLogo,
+    logo: "/src/assets/Logos/AllianceAviation.png",
   },
   {
     id: 2,
     name: "DrGaray",
-    logo: drGarayLogo,
+    logo: "/src/assets/Logos/dr-garay.webp",
   },
   {
     id: 3,
     name: "Exunet",
-    logo: exunetLogo,
+    logo: "/src/assets/Logos/exunet.png",
   },
   {
     id: 4,
     name: "GlowMed",
-    logo: glowmedLogo,
+    logo: "/src/assets/Logos/glowmed.png",
   },
   {
     id: 5,
     name: "Linux",
-    logo: linuxLogo,
+    logo: "/src/assets/Logos/linux.webp",
   },
   {
     id: 6,
     name: "MiguelPuga",
-    logo: miguelPugaLogo,
+    logo: "/src/assets/Logos/MiguelPuga.jpg",
   },
   {
     id: 7,
     name: "RocaViviendas",
-    logo: rocaViviendasLogo,
+    logo: "/src/assets/Logos/roca-viviendas.webp",
   },
   {
     id: 8,
     name: "Smart",
-    logo: smartLogo,
+    logo: "src/assets/Logos/Smart.webp",
   },
   {
     id: 9,
     name: "tourmalhyn",
-    logo: tourmalhynLogo,
+    logo: "src/assets/Logos/tourmalhyn.png",
   },
 ];
 
 const LogoCard = ({ brand, isDuplicate = false }) => (
   <div
     key={isDuplicate ? `${brand.id}-duplicate` : brand.id}
-    className="group w-80 h-52 flex-shrink-0 bg-gray-800/30 backdrop-blur-xl
+    className="group w-80 h-52 flex-shrink-0 bg-gray-800/30 backdrop-blur-xl 
       rounded-xl p-4 flex items-center justify-center
       border border-gray-700/50 transition-all duration-300
       hover:border-[#ffbc00]/30 hover:shadow-lg hover:shadow-yellow-500/20"
@@ -85,17 +76,24 @@ const TrustedBrands = () => {
         </h2>
       </div>
 
+      {/* Contenedor del carrusel */}
       <div className="relative w-full mt-20">
+        {/* Gradiente izquierdo */}
         <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
+
+        {/* Gradiente derecho */}
         <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
 
+        {/* Track del carrusel */}
         <div className="flex animate-scroll">
+          {/* Primera copia de logos */}
           <div className="flex space-x-12 items-center">
             {brands.map((brand) => (
               <LogoCard key={brand.id} brand={brand} />
             ))}
           </div>
 
+          {/* Segunda copia de logos para el efecto infinito */}
           <div className="flex space-x-12 items-center">
             {brands.map((brand) => (
               <LogoCard
