@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
@@ -11,4 +10,21 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Agregamos esta configuración para el manejo de activos
+  build: {
+    assetsDir: "assets",
+    rollupOptions: {
+      output: {
+        assetFileNames: "assets/[name].[ext]",
+      },
+    },
+  },
+  // Configuración para el servidor de desarrollo
+  server: {
+    fs: {
+      strict: false,
+    },
+  },
+  // Asegurarse de que Vite pueda acceder a los archivos públicos
+  publicDir: "public",
 });
