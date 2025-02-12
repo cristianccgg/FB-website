@@ -17,16 +17,16 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed md:max-w-2xl  w-full md:top-10 left-1/2 -translate-x-1/2 z-50 
-    md:rounded-2xl border border-gray-700/50 
-    bg-gray-800/30 backdrop-blur-xl
-    transition-all duration-300 
-    hover:border-[#ffbc00]/30 hover:shadow-lg hover:shadow-yellow-500/20"
+      className="fixed max-w-4xl top-10 left-1/2 -translate-x-1/2 z-50 
+        rounded-2xl border border-gray-700/50 
+        bg-gray-800/30 backdrop-blur-xl
+        transition-all duration-300 
+        hover:border-[#ffbc00]/30 hover:shadow-lg hover:shadow-yellow-500/20"
     >
-      <div className="container mx-auto px-2 sm:px-4">
-        <div className="flex items-center justify-between h-16 gap-2 sm:gap-4">
-          <div className="flex items-center h-20 flex-shrink-0">
-            <img src={logo} alt="Logo" className="h-8 sm:h-10" />
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-16 gap-5">
+          <div className="flex items-center h-20">
+            <img src={logo} alt="Logo" className="h-10" />
           </div>
 
           {/* Mobile menu button */}
@@ -38,52 +38,52 @@ const Navbar = () => {
           </button>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center gap-3 lg:gap-8 flex-shrink">
+          <div className="hidden md:flex items-center space-x-8">
             <a
               href="#"
-              className="text-white hover:text-[#ffbc00] transition-colors relative group text-sm lg:text-base whitespace-nowrap"
+              className="text-white hover:text-[#ffbc00] transition-colors relative group"
             >
               Inicio
               <div className="absolute inset-x-0 -bottom-1 h-[1px] bg-[#ffbc00]/0 group-hover:bg-[#ffbc00]/50 transition-colors" />
             </a>
             <a
               href="#"
-              className="text-white hover:text-[#ffbc00] transition-colors relative group text-sm lg:text-base whitespace-nowrap"
+              className="text-white hover:text-[#ffbc00] transition-colors relative group"
             >
               Clientes
               <div className="absolute inset-x-0 -bottom-1 h-[1px] bg-[#ffbc00]/0 group-hover:bg-[#ffbc00]/50 transition-colors" />
             </a>
             <a
               href="#"
-              className="text-white hover:text-[#ffbc00] transition-colors relative group text-sm lg:text-base whitespace-nowrap"
+              className="text-white hover:text-[#ffbc00] transition-colors relative group"
             >
               Nosotros
               <div className="absolute inset-x-0 -bottom-1 h-[1px] bg-[#ffbc00]/0 group-hover:bg-[#ffbc00]/50 transition-colors" />
             </a>
             <a
               href="#"
-              className="text-white hover:text-[#ffbc00] transition-colors relative group text-sm lg:text-base whitespace-nowrap"
+              className="text-white hover:text-[#ffbc00] transition-colors relative group"
             >
               Servicios
               <div className="absolute inset-x-0 -bottom-1 h-[1px] bg-[#ffbc00]/0 group-hover:bg-[#ffbc00]/50 transition-colors" />
             </a>
             <button
-              className="h-8 lg:h-10 px-3 lg:px-6 flex items-center justify-center 
-            bg-[#ffbc00] rounded-full text-black text-xs font-medium
-            transition-all duration-300 transform hover:scale-105
-            ring-2 ring-[#ffbc00]/50 hover:ring-[#ffbc00]
-            shadow-md shadow-black/40 whitespace-nowrap"
+              className="h-10 px-6 flex items-center justify-center 
+                bg-[#ffbc00] rounded-full text-black text-sm text-nowrap font-medium
+                transition-all duration-300 transform hover:scale-105
+                ring-2 ring-[#ffbc00]/50 hover:ring-[#ffbc00]
+                shadow-md shadow-black/40"
             >
               <span className="relative">Reservar una llamada</span>
             </button>
           </div>
         </div>
 
-        {/* Mobile menu - sin cambios */}
+        {/* Mobile menu */}
         <div
-          className={`md:hidden w-xs  transition-all duration-300 
-        ${isOpen ? "max-h-fit opacity-100" : "max-h-0 opacity-0"} 
-        overflow-hidden`}
+          className={`md:hidden transition-all duration-300 
+            ${isOpen ? "max-h-fit opacity-100" : "max-h-0 opacity-0"} 
+            overflow-hidden`}
         >
           <div className="pb-6 space-y-4">
             <a
@@ -116,10 +116,10 @@ const Navbar = () => {
             </a>
             <button
               className="w-full h-10 flex items-center justify-center 
-            bg-[#ffbc00] rounded-full text-black font-medium
-            transition-all duration-300 transform hover:scale-105
-            ring-2 ring-[#ffbc00]/50 hover:ring-[#ffbc00]
-            shadow-md shadow-black/40 px-2"
+                bg-[#ffbc00] rounded-full text-black font-medium
+                transition-all duration-300 transform hover:scale-105
+                ring-2 ring-[#ffbc00]/50 hover:ring-[#ffbc00]
+                shadow-md shadow-black/40 px-2"
             >
               Reservar una llamada
             </button>
