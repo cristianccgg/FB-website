@@ -4,37 +4,37 @@ const brands = [
   {
     id: 1,
     name: "Alliance",
-    logo: "src/assets/Logos/AllianceAviation.png",
+    logo: "/src/assets/Logos/AllianceAviation.png",
   },
   {
     id: 2,
     name: "DrGaray",
-    logo: "src/assets/Logos/dr-garay.webp",
+    logo: "/src/assets/Logos/dr-garay.webp",
   },
   {
     id: 3,
     name: "Exunet",
-    logo: "src/assets/Logos/exunet.png",
+    logo: "/src/assets/Logos/exunet.png",
   },
   {
     id: 4,
     name: "GlowMed",
-    logo: "src/assets/Logos/glowmed.png",
+    logo: "/src/assets/Logos/glowmed.png",
   },
   {
     id: 5,
     name: "Linux",
-    logo: "src/assets/Logos/linux.webp",
+    logo: "/src/assets/Logos/linux.webp",
   },
   {
     id: 6,
     name: "MiguelPuga",
-    logo: "src/assets/Logos/MiguelPuga.jpg",
+    logo: "/src/assets/Logos/MiguelPuga.jpg",
   },
   {
     id: 7,
     name: "RocaViviendas",
-    logo: "src/assets/Logos/roca-viviendas.webp",
+    logo: "/src/assets/Logos/roca-viviendas.webp",
   },
   {
     id: 8,
