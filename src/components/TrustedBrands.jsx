@@ -1,59 +1,50 @@
 import React from "react";
-import allianceLogo from "@/assets/logos/allianceaviation.png";
-import drGarayLogo from "@/assets/logos/dr-garay.webp";
-import exunetLogo from "@/assets/logos/exunet.png";
-import glowmedLogo from "@/assets/logos/glowmed.png";
-import linuxLogo from "@/assets/logos/linux.webp";
-import miguelPugaLogo from "@/assets/logos/miguelpuga.jpg";
-import rocaViviendasLogo from "@/assets/logos/roca-viviendas.webp";
-import smartLogo from "@/assets/logos/smart.webp";
-import tourmalhynLogo from "@/assets/logos/tourmalhyn.png";
 
 const brands = [
   {
     id: 1,
     name: "Alliance",
-    logo: allianceLogo,
+    logo: "/logos/AllianceAviation.png",
   },
   {
     id: 2,
     name: "DrGaray",
-    logo: drGarayLogo,
+    logo: "/logos/dr-garay.webp",
   },
   {
     id: 3,
     name: "Exunet",
-    logo: exunetLogo,
+    logo: "/logos/exunet.png",
   },
   {
     id: 4,
     name: "GlowMed",
-    logo: glowmedLogo,
+    logo: "/logos/GLOWMED.png",
   },
   {
     id: 5,
     name: "Linux",
-    logo: linuxLogo,
+    logo: "/logos/Linux.webp",
   },
   {
     id: 6,
     name: "MiguelPuga",
-    logo: miguelPugaLogo,
+    logo: "/logos/MiguelPuga.jpg",
   },
   {
     id: 7,
     name: "RocaViviendas",
-    logo: rocaViviendasLogo,
+    logo: "/logos/roca-viviendas.webp",
   },
   {
     id: 8,
     name: "Smart",
-    logo: smartLogo,
+    logo: "/logos/Smart.webp",
   },
   {
     id: 9,
     name: "tourmalhyn",
-    logo: tourmalhynLogo,
+    logo: "/logos/tourmalhyn.png",
   },
 ];
 
