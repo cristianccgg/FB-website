@@ -6,12 +6,12 @@ const DecorativeBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
     <motion.div
       initial={false}
-      animate={{ opacity: 0.3 }}
+      animate={{ opacity: 0.5 }}
       transition={{ duration: 0.3 }}
-      className="absolute w-200 h-100
+      className="absolute w-140 h-120
         bg-gradient-to-tr from-orange-800 via-yellow-400 to-transparent
         blur-3xl
-        bottom-1/3 left-1/2 transform -translate-x-1/2"
+        bottom-1/6 left-1/2 transform -translate-x-1/2"
     />
   </div>
 );
