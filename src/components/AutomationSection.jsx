@@ -40,7 +40,7 @@ const ProcessStep = ({ number, title, delay = 0 }) => {
       whileHover={{ scale: prefersReducedMotion ? 1 : 1.02 }}
       variants={variants}
       transition={{ duration: 0.3, delay: 1 }}
-      className="group relative flex items-center space-x-6 p-6
+      className="group relative flex items-center space-x-6 p-4
         bg-gray-800/40 border border-gray-700/50
         rounded-2xl overflow-hidden
         hover:border-yellow-500/30 hover:shadow-lg hover:shadow-yellow-500/20"
@@ -130,9 +130,9 @@ const AutomationSection = () => {
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
           variants={containerVariants}
-          className="border-5 border-yellow-500/30 bg-gray-800/30 backdrop-blur-xl w-fit p-8 mx-auto rounded-3xl overflow-hidden"
+          className="border-5 border-yellow-500/30 bg-gray-800/30 backdrop-blur-xl w-fit p-6 mx-auto rounded-3xl overflow-hidden"
         >
-          <div className="grid gap-6 max-w-xl md:w-xl mx-auto">
+          <div className="grid gap-6 max-w-xl md:w-md mx-auto">
             {[
               { number: "1", title: "Bienvenida personalizada" },
               { number: "2", title: "Seguimiento continuo" },

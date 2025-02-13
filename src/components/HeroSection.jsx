@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  const wordArray = "Inteligencia Artificial".split(" ");
+  const wordArray = "IA".split(" ");
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -98,32 +98,31 @@ const HeroSection = () => {
         >
           {/* Título principal */}
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white leading-tight"
+            className="text-4xl md:text-5xl mx-auto max-w-2xl font-bold text-white leading-tight"
             variants={fadeUpVariants}
           >
-            <motion.span className="block mb-4">
+            <motion.span className="block mb-4 pe-4">
               Más consultas, agenda organizada y ventas automatizadas con
+              {/* Palabras animadas */}
+              <motion.div
+                className="relative inline-flex flex-wrap justify-center gap-x-4"
+                variants={wordContainerVariants}
+              >
+                {wordArray.map((word, wordIndex) => (
+                  <div key={wordIndex} className="relative ps-4">
+                    {word.split("").map((letter, letterIndex) => (
+                      <motion.span
+                        key={letterIndex}
+                        variants={letterVariants}
+                        className="inline-block"
+                      >
+                        {letter}
+                      </motion.span>
+                    ))}
+                  </div>
+                ))}
+              </motion.div>
             </motion.span>
-
-            {/* Palabras animadas */}
-            <motion.div
-              className="relative inline-flex flex-wrap justify-center gap-x-4"
-              variants={wordContainerVariants}
-            >
-              {wordArray.map((word, wordIndex) => (
-                <div key={wordIndex} className="relative">
-                  {word.split("").map((letter, letterIndex) => (
-                    <motion.span
-                      key={letterIndex}
-                      variants={letterVariants}
-                      className="inline-block"
-                    >
-                      {letter}
-                    </motion.span>
-                  ))}
-                </div>
-              ))}
-            </motion.div>
 
             <div className="relative mt-6">
               <motion.div

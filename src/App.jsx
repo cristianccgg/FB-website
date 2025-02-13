@@ -184,8 +184,8 @@ const App = () => {
       <CustomCursor />
       <Navbar />
       <HeroSection />
-      <AutomationSection />
       <VideoSection />
+      <AutomationSection />
       <TrustedBrands />
       <SeccionOne />
       <TestimonialsSection />
