@@ -57,7 +57,7 @@ const ProcessStep = ({ number, title, delay = 0 }) => {
         transition={{ type: "spring", stiffness: 300 }}
       >
         <div
-          className="w-12 h-12 flex items-center justify-center
+          className="w-8 h-8 flex items-center justify-center
             bg-yellow-500 rounded-xl text-black text-xl font-bold
             ring-2 ring-yellow-500/50 group-hover:ring-yellow-500
             shadow-md shadow-black/40"
@@ -118,10 +118,10 @@ const AutomationSection = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
           transition={{ duration: 2, delay: 1.5, ease: "easeOut" }}
         >
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-white ">
             Tu día: proceso de automatización
           </h2>
         </motion.div>
@@ -130,7 +130,7 @@ const AutomationSection = () => {
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
           variants={containerVariants}
-          className="border-5 border-yellow-500/30 bg-gray-800/30 backdrop-blur-xl w-fit p-6 mx-auto rounded-3xl overflow-hidden"
+          className="border-5 border-yellow-500/30 bg-gray-800/30 backdrop-blur-xl w-fit px-8 pt-10 mx-auto rounded-3xl overflow-hidden"
         >
           <div className="grid gap-6 max-w-xl md:w-md mx-auto">
             {[
@@ -153,7 +153,7 @@ const AutomationSection = () => {
             initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2, duration: 0.3 }}
-            className="text-center mt-16"
+            className="text-center my-10"
           >
             <motion.button
               whileHover={{ scale: prefersReducedMotion ? 1 : 1.05 }}
