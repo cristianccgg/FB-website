@@ -42,13 +42,26 @@ const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [itemsToShow, setItemsToShow] = useState(1);
 
   // Crear un array con testimonios duplicados para el efecto infinito
   const extendedTestimonials = [...testimonials, ...testimonials];
-
-  // Calculamos cuántos testimonios mostrar basado en el viewport
-  const itemsToShow = window.innerWidth >= 768 ? 2 : 1;
   const maxIndex = testimonials.length;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setItemsToShow(window.innerWidth >= 768 ? 2 : 1);
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -66,7 +79,6 @@ const TestimonialsSection = () => {
     setIsTransitioning(true);
 
     if (currentIndex === 0) {
-      // Si estamos en el primer elemento, saltamos al último del set original
       setCurrentIndex(maxIndex - 1);
     } else {
       setCurrentIndex(currentIndex - 1);
@@ -80,7 +92,6 @@ const TestimonialsSection = () => {
     setIsTransitioning(true);
 
     if (currentIndex >= maxIndex - 1) {
-      // Si llegamos al final del primer set, volvemos al inicio
       setCurrentIndex(0);
     } else {
       setCurrentIndex(currentIndex + 1);
@@ -97,9 +108,7 @@ const TestimonialsSection = () => {
         </h2>
 
         <div className="relative max-w-5xl mx-auto">
-          {/* Main carousel */}
           <div className="overflow-hidden rounded-2xl py-8 -my-8">
-            {/* Carousel track */}
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{
@@ -123,7 +132,6 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
-          {/* Navigation buttons */}
           <button
             onClick={handlePrevious}
             className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full
@@ -147,7 +155,6 @@ const TestimonialsSection = () => {
             <ChevronRight size={24} />
           </button>
 
-          {/* Dots indicator */}
           <div className="flex justify-center space-x-2 mt-8">
             {[...Array(maxIndex)].map((_, index) => (
               <button

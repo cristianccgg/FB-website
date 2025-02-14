@@ -180,7 +180,7 @@ const VideoSection = () => {
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen px-5 bg-black">
       <CustomCursor />
       <Navbar />
       <HeroSection />
