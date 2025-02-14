@@ -102,7 +102,7 @@ const HeroSection = () => {
             variants={fadeUpVariants}
           >
             <motion.span className="block mb-4 pe-4">
-              Más consultas, agenda organizada y ventas automatizadas con
+              Ventas y agendas automatizadas con
               {/* Palabras animadas */}
               <motion.div
                 className="relative inline-flex flex-wrap justify-center gap-x-4"
